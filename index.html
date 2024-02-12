@@ -1,0 +1,268 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Concesionario Romeo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(fotostrabajo/fondo_blanco.jpg);
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            justify-content: space-around;
+            margin-right: 20px;
+            size: 300px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            justify-content: end;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #productos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            border: 2px solid #000000;
+            border-radius: 40px;
+            box-shadow: 10px;
+            padding: 5px;
+            text-align: center;
+            width: 30%;
+            background-color: #d4d4d4;
+        }
+
+        
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 40px 40px 0px 0px;
+        }
+        .contenido-sobre-nosotros {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+}
+
+.texto {
+    padding: 20px;
+}
+
+.texto h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.texto p {
+    margin-bottom: 15px;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: 90%;
+    border: 3px solid black;
+}
+.informacion-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.correo, .telefono, .redes-sociales {
+    text-align: center;
+}
+
+.telefono img {
+    
+    height: 50px;
+}
+
+.redes-sociales h3 {
+    margin-bottom: 10px;
+}
+
+.red {
+    margin-top: 10px;
+}
+
+.red img {
+    
+    height: 50px;
+}
+
+.mapa { 
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Concesionario Romeo</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos"> Nuestros Coches</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido al Concesionario Romeo</h2>
+
+
+    </section>
+    <h2>Vehiculos de segunda mano</h2>
+    <section id="productos">
+
+        <div class="producto">
+            <img src="fotostrabajo/Citroën_C2_front-1.JPG" alt="Coche 1">
+            <h3><b>Citröen C2</b></h3>
+            <p>Motor: 1.2 Gasolina</p>
+            <p>Transmisión: Manual</p>
+            <p>Color: Gris</p>
+        </div>
+
+        <div class="producto">
+            <img src="fotostrabajo/WhatsApp-Image-2022-02-25-at-19.49.31.jpeg" alt="Coche 1">
+            <h3><b>Ford Mondeo</b></h3>
+            <p>Motor: 1.6 Gasolina</p>
+            <p>Transmisión: Automatica</p>
+            <p>Color: Negro</p>
+        </div>
+
+        <div class="producto">
+            <img src="fotostrabajo/1200px-Peugeot_308_5-Türer_front-1.jpeg" alt="Coche 1">
+            <h3><b>Peugeot 308</b></h3>
+            <p>Motor: 1.6 Gasolina</p>
+            <p>Transmisión: Manual</p>
+            <p>Color: Gris</p>
+        </div>
+
+        <div class="producto">
+            <img src="fotostrabajo/2004_SEAT_Ibiza_SX_1.2_Front.jpg" alt="Coche 1">
+            <h3><b>Seat Ibiza</b></h3>
+            <p>Motor: 1.4 Gasolina</p>
+            <p>Transmisión: Manual</p>
+            <p>Color: Gris</p>
+        </div>
+
+        <div class="producto">
+            <img src="fotostrabajo/2002_Peugeot_206_LX_1.4_Front.jpg" alt="Coche 1">
+            <h3><b>Peugeot 206</b></h3>
+            <p>Motor: 1.2 Gasolina</p>
+            <p>Transmisión: Manual</p>
+            <p>Color: Gris</p>
+        </div>
+
+        <div class="producto">
+            <img src="fotostrabajo/Captura desde 2024-02-12 09-06-25.png" alt="Coche 1">
+            <h3><b>Toyota Yaris Hibryd</b></h3>
+            <p>Motor: Hibrido 1.6 Diesel</p>
+            <p>Transmisión: Automatica</p>
+            <p>Color: Blanco</p>
+        </div>
+
+    </section>
+
+    <section id="sobre-nosotros">
+    <h2>Sobre Nosotros</h2>
+
+    <div class="contenido-sobre-nosotros">
+        <div class="texto">
+            <h3>Bienvenido a nuestro Concesionario de Vehículos</h3>
+            <p>Somos un concesionario comprometido con la excelencia en el servicio al cliente y la calidad de nuestros productos. Desde hace más de una década, nos dedicamos a ofrecer una amplia gama de vehículos de alta calidad para satisfacer las necesidades de nuestros clientes.</p>
+            <p>Nuestro equipo está formado por profesionales apasionados por el mundo del automóvil, quienes se esfuerzan por brindar una experiencia única a cada persona que nos visita.</p>
+            <p>En nuestro concesionario, encontrarás una variedad de marcas y modelos, desde coches familiares hasta deportivos de alta gama. Además, ofrecemos servicios de mantenimiento y asesoramiento personalizado para garantizar la satisfacción de nuestros clientes en cada etapa de su experiencia con nosotros.</p>
+        </div>
+        <div class="imagen">
+            <img src="fotostrabajo/imagen3786_NM3787_MG7738668.jpeg" alt="Concesionario">
+        </div>
+    </div>
+
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+
+    <div class="informacion-contacto">
+        <div class="correo">
+            <img src="correo-icono.png" alt="Correo electrónico">
+            <p>atencionalcliente@concesionarioromeo.com</p>
+        </div>
+        <div class="telefono">
+            <img src="fotostrabajo/5a4525cd546ddca7e1fcbc84.png" alt="Teléfono">
+            <p>971 69 69 69</p>
+        </div>
+        <div class="redes-sociales">
+            <h3>Síguenos en redes sociales:</h3>
+            <div class="red">
+                <a href="www.facebook.es"><img src="fotostrabajo/Facebook_Logo_(2019).png" alt="Facebook"></a>
+            </div>
+            <div class="red">
+                <a href="www.twitter.es"><img src="fotostrabajo/logo-black.png.twimg.1920.png" alt="Twitter"></a>
+            </div>
+            <div class="red">
+                <a href="www.instagram.es"><img src="fotostrabajo/e3da7bd831f33193359f78c86d8c250a.jpg" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="mapa"><iframe border="1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.3569367558016!2d2.502811755398197!3d39.49726241451217!2m3!1f0!2f0!3f0!3m2!1i1024
+    !2i768!4f13.1!3m3!1m2!1s0x129788fef0948d5b%3A0xc10accc3ef41ff66!2sIES%20Son%20Ferrer!5e0!3m2!1sca!2ses!4v1707724020437!5m2!1sca!2ses" width="600" 
+    height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+</section>
+
+    <footer>
+        <p>&copy; 2024 Concesionario Romeo</p>
+    </footer>
+</body>
+
+</html>
