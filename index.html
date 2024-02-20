@@ -1,527 +1,585 @@
 <html lang="es">
 
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Segundo Kilometraje</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <style>
-        body,
-        p,
-        ul {
-            margin: 0;
-            padding: 0;
-            text-size-adjust: 100%;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        h1,
-        h2 {
-            color: #ffffff;
-            font-size: 60px;
-            text-align: center;
-            text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        body {
-            background-image: url('fotostrabajo/body_pattern.png');
-            font-family: "REM", sans-serif;
-            font-optical-sizing: auto;
-            background-color: #000000;
-            line-height: 1.6;
-        }
-
-        header {
-            display: flex;
-            background-color: rgb(51, 51, 51);
-            padding: 5px;
-            justify-content: space-between;
-            align-items: center;
-            height: 10vh;
-            position: fixed;
-            width: 99vw;
-        }
-
-        header nav ul {
-            list-style: none;
-        }
-
-        header nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        header nav ul li a {
-
-            color: #fff;
-            text-decoration: none;
-            padding: 15px;
-            margin: 0 5px;
-            display: inline-block;
-            font-weight: bold;
-            font-size: 20px;
-            border: 1px solid transparent;
-            border-radius: 5px;
-        }
-
-        header nav a:hover {
-            background-color: rgb(196, 196, 196);
-            border: 1px solid rgb(36, 36, 36);
-            color: #000000;
-            transition: 0.2s;
-        }
-
-        header img {
-            width: 150px;
-            height: auto;
-
-        }
-
-        header .alineado {
-            display: flex;
-            justify-content: center;
-
-        }
-
-        section {
-            padding: 50px;
-            text-align: center;
-            height: 100vh;
-            display: block;
-            overflow: auto;
-        }
-
-        #inicio {
-            background-image: url('fotostrabajo/fondo.jpg');
-            background-size: cover;
-            color: #000000;
-            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        #productos {
-            padding-top: 7%;
-            background-color: #0e0e0e;
-            color: #fff;
-            height: 850px;
-        }
-
-        .producto {
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
-            width: 300px;
-        }
-
-        .producto:hover {
-            background-color: rgb(196, 196, 196);
-            border-radius: 5px;
-            color: #000000;
-            transition: 0.3s;
-            transform: scale(1.2);
-        }
-
-        .producto img {
-            width: 100%;
-        }
-
-        #sobre-nosotros {
-            background-image: url('fotostrabajo/fondo2.jpg');
-            background-size: cover;
-            color: #ffffff;
-            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <title>Segundo Kilometraje</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap"
+       rel="stylesheet">
+   <style>
+       body,
+       p,
+       ul {
+           margin: 0;
+           padding: 0;
+           text-size-adjust: 100%;
+       }
 
 
-
-        .contenido-sobre-nosotros {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .contenido-sobre-nosotros h3 {
-            font-size: 80px;
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .contenido-sobre-nosotros p {
-            font-size: 30px;
-            text-align: justify;
-            margin-right: 200px;
-            margin-left: 200px;
-        }
-
-        .texto {
-            flex: 1;
-            padding-right: 20px;
-            text-align: center;
-        }
-
-        #contacto {
-            background-color: #333;
-            color: #fff;
-            height: 800px;
-            padding-top: 10vh;
-            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .informacion-contacto {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .correo,
-        .telefono,
-        .redes-sociales {
-            margin: 20px;
-            flex: 1 100%;
-            text-align: center;
-            max-width: 15%;
-        }
-
-        .red {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .correo img {
-            max-width: 60px;
-        }
-
-        .red a img {
-            max-width: 60px;
-        }
-
-        .red a img:hover {
-            transform: scale(1.1);
-            transition: 0.2s;
-        }
-
-        .telefono img {
-            max-width: 60px;
-        }
-
-        .mapa {
-            float: left;
-            width: 50%;
-        }
-
-        .mapa h2 {
-            color: #ffffff;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+       html {
+           scroll-behavior: smooth;
+       }
 
 
-        .formulario-container {
-            float: right;
-            width: 50%;
-        }
+       h1,
+       h2 {
+           color: #ffffff;
+           font-size: 3vw;
+           text-align: center;
+           text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5);
+       }
 
 
-        .formulario {
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+       body {
+           background-image: url('fotostrabajo/body_pattern.png');
+           font-family: "REM", sans-serif;
+           font-optical-sizing: auto;
+           background-image: no-repeat;
+           background-image: cover cover;
+       }
 
-        .formulario h2 {
-            color: #ffffff;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
 
-        .formulario label {
-            display: flex;
-            float: initial;
-            color: #ffffff;
-            font-weight: bold;
-        }
+       header {
+           display: flex;
+           background-color: rgb(31, 31, 31);
+           opacity: 97%;
+           padding: 0.7vh 0.7vw;
+           justify-content: space-between;
+           align-items: center;
+           height: 10vh;
+           position: fixed;
+           width: 98vw;
+       }
 
-        .formulario textarea {
-            width: 70%;
-            height: 20%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 3px solid #ccc;
-            border-radius: 8px;
-        }
 
-        .checkbox {
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
+       header nav ul {
+           list-style: none;
+       }
 
-        .checkbox input[type="checkbox"] {
-            margin-right: 10px;
-        }
 
-        .checkbox label {
-            font-size: 16px;
-        }
+       header nav ul li {
+           display: inline-block;
+           margin-right: 2vw;
+       }
 
-        button[type="submit"] {
-            background-color: #505050;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
 
-        button[type="submit"]:hover {
-            background-color: #181818;
-        }
+       header nav ul li a {
 
-        #contacto .contenidoContacto {
-            display: flex;
-            margin-top: 10vh;
-        }
 
-        footer {
-            display: flex;
-            padding: 5px;
-            justify-content: space-between;
-            align-items: center;
-            height: 10vh;
-            width: 99vw;
-            color: #ffffff;
-            width: auto;
-        }
+           color: #fff;
+           text-decoration: none;
+           padding: 2vh 1vw;
+           display: inline-block;
+           font-weight: bold;
+           font-size: 1.3vw;
+           border: 0.1vw solid transparent;
+           border-radius: 0.5vw;
+       }
 
-        footer nav ul {
-            list-style: none;
-        }
 
-        footer nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
+       header nav a:hover {
+           background-color: rgb(196, 196, 196);
+           border: 0.1vw solid rgb(36, 36, 36);
+           color: #000000;
+           transition: 0.2s;
+       }
 
-        footer nav ul li a {
 
-            color: #fff;
-            text-decoration: none;
-            padding: 15px;
-            margin: 0 5px;
-            display: inline-block;
-            font-weight: bold;
-            font-size: 20px;
-            border: 1px solid transparent;
-            border-radius: 5px;
-        }
+       header img {
+           width: 8vw;
+           height: auto;
 
-        footer nav a:hover {
-            background-color: rgb(196, 196, 196);
-            border: 1px solid rgb(36, 36, 36);
-            color: #000000;
-            transition: 0.2s;
-        }
 
-        footer img {
-            width: 150px;
-            height: auto;
-        }
+       }
 
-        footer .alineado {
-            display: flex;
-            justify-content: center;
-        }
-    </style>
+
+       header .alineado {
+           display: flex;
+           justify-content: center;
+
+
+       }
+
+
+       section {
+           padding: 2vh 5vw;
+           text-align: center;
+           min-height: 100vh;
+       }
+
+
+       #inicio {
+           background-image: url('fotostrabajo/fondo.jpg');
+           background-size: cover;
+           color: #000000;
+           box-shadow: 0.5vw 0.5vw 0.8vw rgba(0, 0, 0, 0.5);
+       }
+
+
+       #productos {
+           padding-top: 18vh;
+           background-color: #0e0e0e;
+           color: #fff;
+           min-height: 85vh;
+       }
+
+
+       .producto {
+           display: inline-block;
+           margin: 2vh 2vw;
+           text-align: center;
+           width: 13.5vw;
+       }
+
+
+       .producto:hover {
+           background-color: rgb(196, 196, 196);
+           border-radius: 0.5vw;
+           color: #000000;
+           transition: 0.3s;
+           transform: scale(1.2);
+       }
+
+
+       .producto img {
+           width: 100%;
+       }
+
+
+       #sobre-nosotros {
+           background-image: url('fotostrabajo/fondo2.jpg');
+           background-size: cover;
+           color: #ffffff;
+           padding-top: 18vh;
+           box-shadow: 0.5vw 0.5vw 0.8vw rgba(0, 0, 0, 0.5);
+       }
+
+
+
+
+
+
+       .contenido-sobre-nosotros {
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           flex-wrap: wrap;
+       }
+
+
+       .contenido-sobre-nosotros h3 {
+           font-size: 4vw;
+           text-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
+       }
+
+
+       .contenido-sobre-nosotros p {
+           font-size: 1.5vw;
+           text-align: justify;
+           margin: 2vh 5vw;
+       }
+
+
+       .texto {
+           flex: 1;
+           padding-right: 2vw;
+           padding-left: 2vw;
+           text-align: center;
+       }
+
+
+       #contacto {
+           background-color: #333;
+           color: #fff;
+           min-height: 80vh;
+           padding-top: 18vh;
+           box-shadow: 0.5vw 0.5vw 0.8vw rgba(0, 0, 0, 0.5);
+       }
+
+
+       .informacion-contacto {
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           flex-wrap: wrap;
+       }
+
+
+       .correo,
+       .telefono,
+       .redes-sociales {
+           margin: 1vh 1vw;
+           flex: 1 100%;
+           text-align: center;
+           max-width: 20vw;
+           font-size: large;
+       }
+
+
+       .red {
+           display: inline-block;
+           margin: 0 1vw;
+       }
+
+
+       .correo img {
+           max-width: 5vw;
+       }
+
+
+       .red a img {
+           max-width: 4vw;
+       }
+
+
+       .red a img:hover {
+           transform: scale(1.1);
+           transition: 0.2s;
+       }
+
+
+       .telefono img {
+           max-width: 5vw;
+       }
+
+
+       .mapa {
+           float: left;
+           width: 50%;
+       }
+
+
+       .mapa h2 {
+           color: #ffffff;
+           font-size: 1.75vw;
+           margin-bottom: 2vh;
+       }
+
+
+       .formulario-container {
+           float: right;
+           width: 50%;
+       }
+
+
+       .formulario h2{
+           color: #ffffff;
+           font-size: 1.75vw;
+           margin-bottom: 2vh;
+           
+       }
+
+
+       .formulario label,
+       .formulario input,
+       .formulario textarea {
+           display: block;
+           width: 17.5vw;
+           margin-left: 13.5vw;
+           margin-bottom: 10px;
+       }
+       .checkbox {
+           color: #ffffff;
+           margin-bottom: 2vh;
+       }
+
+
+       .checkbox input[type="checkbox"] {
+           margin-right: 1vw;
+       }
+
+
+       .checkbox label {
+           font-size: 1vw;
+       }
+
+
+       button[type="submit"] {
+           background-color: #505050;
+           color: #fff;
+           border: none;
+           padding: 1vh 2vw;
+           font-size: 1.8vw;
+           border-radius: 0.5vw;
+           cursor: pointer;
+       }
+
+
+       button[type="submit"]:hover {
+           background-color: #181818;
+       }
+
+
+       #contacto .contenidoContacto {
+           display: flex;
+           margin: 10vh 0 10vh 0;
+       }
+
+
+       footer {
+           display: flex;
+           padding: 2vh 1vw;
+           justify-content: space-between;
+           align-items: center;
+           height: 10vh;
+           width: auto;
+           color: #ffffff;
+       }
+
+
+       footer nav ul {
+           list-style: none;
+       }
+
+
+       footer nav ul li {
+           display: inline-block;
+       }
+
+
+       footer nav ul li a {
+           display: flex;
+           justify-content: center;
+           color: #fff;
+           text-decoration: none;
+           padding: 2vh 1vw;
+           margin-right: 1vw;
+           display: inline-block;
+           font-weight: bold;
+           font-size: 1.3vw;
+           border: 0.1vw solid transparent;
+           border-radius: 0.5vw;
+       }
+
+
+       footer nav a:hover {
+           background-color: rgb(196, 196, 196);
+           border: 0.1vw solid rgb(36, 36, 36);
+           color: #000000;
+           transition: 0.2s;
+       }
+
+
+       footer img {
+           width: 8vw;
+           height: auto;
+       }
+
+
+       footer .alineado {
+           display: flex;
+           justify-content: center;
+
+
+       }
+   </style>
 </head>
 
+
 <body>
-    <header>
-        <a href="#inicio"><img src="fotostrabajo/logopagina.png" alt="Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos"> Nuestros Coches</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+       <a href="#inicio"><img src="fotostrabajo/logopagina.png" alt="Logo"></a>
+       <nav>
+           <ul>
+               <li><a href="#inicio">Inicio</a></li>
+               <li><a href="#productos"> Nuestros Coches</a></li>
+               <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+               <li><a href="#contacto">Contacto</a></li>
+           </ul>
+       </nav>
+   </header>
+   <section id="inicio">
+   </section>
+   <h1>Vehiculos de segunda mano</h1>
+   <section id="productos">
 
-    <section id="inicio">
+
+       <div class="producto">
+           <img src="fotostrabajo/CitroenC2.jpg" alt="Coche 1">
+           <h3><b>Citröen C2</b></h3>
+           <p>Motor: 1.2 Gasolina</p>
+           <p>Transmisión: Manual</p>
+           <p>Color: Gris</p>
+       </div>
 
 
+       <div class="producto">
+           <img src="fotostrabajo/fordmondeo.jpeg" alt="Coche 1">
+           <h3><b>Ford Mondeo</b></h3>
+           <p>Motor: 1.6 Gasolina</p>
+           <p>Transmisión: Automatica</p>
+           <p>Color: Negro</p>
+       </div>
 
-    </section>
-    <h1>Vehiculos de segunda mano</h1>
-    <section id="productos">
 
-        <div class="producto">
-            <img src="fotostrabajo/CitroenC2.jpg" alt="Coche 1">
-            <h3><b>Citröen C2</b></h3>
-            <p>Motor: 1.2 Gasolina</p>
-            <p>Transmisión: Manual</p>
-            <p>Color: Gris</p>
-        </div>
+       <div class="producto">
+           <img src="fotostrabajo/peugeot308.jpg" alt="Coche 1">
+           <h3><b>Peugeot 308</b></h3>
+           <p>Motor: 1.6 Gasolina</p>
+           <p>Transmisión: Manual</p>
+           <p>Color: Gris</p>
+       </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/fordmondeo.jpeg" alt="Coche 1">
-            <h3><b>Ford Mondeo</b></h3>
-            <p>Motor: 1.6 Gasolina</p>
-            <p>Transmisión: Automatica</p>
-            <p>Color: Negro</p>
-        </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/peugeot308.jpg" alt="Coche 1">
-            <h3><b>Peugeot 308</b></h3>
-            <p>Motor: 1.6 Gasolina</p>
-            <p>Transmisión: Manual</p>
-            <p>Color: Gris</p>
-        </div>
+       <div class="producto">
+           <img src="fotostrabajo/seatibiza.jpg" alt="Coche 1">
+           <h3><b>Seat Ibiza</b></h3>
+           <p>Motor: 1.4 Gasolina</p>
+           <p>Transmisión: Manual</p>
+           <p>Color: Gris</p>
+       </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/seatibiza.jpg" alt="Coche 1">
-            <h3><b>Seat Ibiza</b></h3>
-            <p>Motor: 1.4 Gasolina</p>
-            <p>Transmisión: Manual</p>
-            <p>Color: Gris</p>
-        </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/peugeot206.jpg" alt="Coche 1">
-            <h3><b>Peugeot 206</b></h3>
-            <p>Motor: 1.2 Gasolina</p>
-            <p>Transmisión: Manual</p>
-            <p>Color: Gris</p>
-        </div>
+       <div class="producto">
+           <img src="fotostrabajo/peugeot206.jpg" alt="Coche 1">
+           <h3><b>Peugeot 206</b></h3>
+           <p>Motor: 1.2 Gasolina</p>
+           <p>Transmisión: Manual</p>
+           <p>Color: Gris</p>
+       </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/toyotayaris.jpg" alt="Coche 1">
-            <h3><b>Toyota Yaris Hibryd</b></h3>
-            <p>Motor: Hibrido 1.6 Diesel</p>
-            <p>Transmisión: Automatica</p>
-            <p>Color: Blanco</p>
-        </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/OpelAstra.jpeg" alt="Coche 1">
-            <h3><b>Opel Astra</b></h3>
-            <p>Motor: 2.0 Diesel</p>
-            <p>Transmisión: Manual</p>
-            <p>Color: Blanco</p>
-        </div>
+       <div class="producto">
+           <img src="fotostrabajo/toyotayaris.jpg" alt="Coche 1">
+           <h3><b>Toyota Yaris Hibryd</b></h3>
+           <p>Motor: Hibrido 1.6 Diesel</p>
+           <p>Transmisión: Automatica</p>
+           <p>Color: Blanco</p>
+       </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/seatLeon.jpg" alt="Coche 1">
-            <h3><b>Seat Leon</b></h3>
-            <p>Motor: 1.9 Diesel</p>
-            <p>Transmisión: Manual</p>
-            <p>Color: Rojo</p>
-        </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/renaultMegane.jpg" alt="Coche 1">
-            <h3><b>Renault Megane RS</b></h3>
-            <p>Motor: 2.0 Gasolina</p>
-            <p>Transmisión: Automatica</p>
-            <p>Color: Rojo</p>
-        </div>
+       <div class="producto">
+           <img src="fotostrabajo/OpelAstra.jpeg" alt="Coche 1">
+           <h3><b>Opel Astra</b></h3>
+           <p>Motor: 2.0 Diesel</p>
+           <p>Transmisión: Manual</p>
+           <p>Color: Blanco</p>
+       </div>
 
-        <div class="producto">
-            <img src="fotostrabajo/hondaAccord.jpeg" alt="Coche 1">
-            <h3><b>Honda Accord</b></h3>
-            <p>Motor: 1.5 Gasolina</p>
-            <p>Transmisión: Automatica</p>
-            <p>Color: Azul</p>
-        </div>
 
-    </section>
-    <h1>Sobre Nosotros</h1>
-    <section id="sobre-nosotros">
-        <div class="contenido-sobre-nosotros">
-            <div class="texto">
-                <h3>Concesionario<br> Segundo Kilometraje</h3>
-                <p> Somos un concesionario comprometido con la excelencia en el servicio al cliente y la calidad de
-                    nuestros productos.
-                    Desde hace más de una década, nos dedicamos a ofrecer una amplia gama de vehículos de alta calidad
-                    para satisfacer las necesidades de nuestros clientes.
-                    En nuestro concesionario, encontrarás una variedad de marcas y modelos, desde coches familiares
-                    hasta deportivos de alta gama.
-                    Además, ofrecemos servicios de mantenimiento y asesoramiento personalizado
-                    para garantizar la satisfacción de nuestros clientes en cada etapa de su experiencia con nosotros.
-                </p>
-            </div>
-        </div>
+       <div class="producto">
+           <img src="fotostrabajo/seatLeon.jpg" alt="Coche 1">
+           <h3><b>Seat Leon</b></h3>
+           <p>Motor: 1.9 Diesel</p>
+           <p>Transmisión: Manual</p>
+           <p>Color: Rojo</p>
+       </div>
 
-    </section>
-    <h1>Contacto</h1>
-    <section id="contacto">
-        <div class="informacion-contacto">
-            <div class="correo">
-                <h3>Correo electrónico</h3>
-                <img src="fotostrabajo/correoEleLogo.png" alt="Correo electrónico"><br>
-                <p>atencionalcliente@concesionarioromeo.com</p>
-            </div>
-            <div class="telefono">
-                <h3>Telefono</h3>
-                <img src="fotostrabajo/5a4525cd546ddca7e1fcbc84.png" alt="Teléfono">
-                <p>971 69 69 69</p>
-            </div>
-            <div class="redes-sociales">
-                <h3>Síguenos en redes sociales:</h3>
-                <div class="red">
-                    <a href="https://www.facebook.com/?locale=ca_ES"><img src="fotostrabajo/Facebook_Logo_(2019).png"
-                            alt="Facebook"></a>
+
+       <div class="producto">
+           <img src="fotostrabajo/renaultMegane.jpg" alt="Coche 1">
+           <h3><b>Renault Megane RS</b></h3>
+           <p>Motor: 2.0 Gasolina</p>
+           <p>Transmisión: Automatica</p>
+           <p>Color: Rojo</p>
+       </div>
+
+
+       <div class="producto">
+           <img src="fotostrabajo/hondaAccord.jpeg" alt="Coche 1">
+           <h3><b>Honda Accord</b></h3>
+           <p>Motor: 1.5 Gasolina</p>
+           <p>Transmisión: Automatica</p>
+           <p>Color: Azul</p>
+       </div>
+
+
+   </section>
+   <h1>Sobre Nosotros</h1>
+   <section id="sobre-nosotros">
+       <div class="contenido-sobre-nosotros">
+           <div class="texto">
+               <h3>Concesionario<br> Segundo Kilometraje</h3>
+               <p> Somos un concesionario comprometido con la excelencia en el servicio al cliente y la calidad de
+                   nuestros productos.
+                   Desde hace más de una década, nos dedicamos a ofrecer una amplia gama de vehículos de alta calidad
+                   para satisfacer las necesidades de nuestros clientes.
+                   En nuestro concesionario, encontrarás una variedad de marcas y modelos, desde coches familiares
+                   hasta deportivos de alta gama.
+                   Además, ofrecemos servicios de mantenimiento y asesoramiento personalizado
+                   para garantizar la satisfacción de nuestros clientes en cada etapa de su experiencia con nosotros.
+               </p>
+           </div>
+       </div>
+
+
+   </section>
+   <h1>Contacto</h1>
+   <section id="contacto">
+       <div class="informacion-contacto">
+           <div class="correo">
+               <h3>Correo electrónico</h3>
+               <img src="fotostrabajo/correoEleLogo.png" alt="Correo electrónico"><br>
+               <p>atencionalcliente@segundokilometraje.com</p>
+           </div>
+           <div class="telefono">
+               <h3>Telefono</h3>
+               <img src="fotostrabajo/5a4525cd546ddca7e1fcbc84.png" alt="Teléfono">
+               <p>971 69 69 69</p>
+           </div>
+           <div class="redes-sociales">
+               <h3>Síguenos en redes sociales:</h3>
+               <div class="red">
+                   <a href="https://www.facebook.com/?locale=ca_ES"><img src="fotostrabajo/Facebook_Logo_(2019).png"
+                           alt="Facebook"></a>
+               </div>
+               <div class="red">
+                   <a href="https://twitter.com/?lang=ca"><img src="fotostrabajo/logo-black.png.twimg.1920.png"
+                           alt="Twitter"></a>
+               </div>
+               <div class="red">
+                   <a href="https://www.instagram.com/"><img src="fotostrabajo/instagramLogo.png" alt="Instagram"></a>
+               </div>
+           </div>
+       </div>
+       <br>
+       <div class="contenidoContacto">
+           <div class="mapa">
+               <h2>Ubicación</h2>
+               <iframe
+                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.731756988709!2d2.5006220767169913!3d39.49797127160213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129788fef0948d5b%3A0xc10accc3ef41ff66!2sIES%20Son%20Ferrer!5e0!3m2!1ses!2ses!4v1708346099237!5m2!1ses!2ses"
+                   width="800vw" height="300vh" style="border:0;" allowfullscreen="" loading="lazy"
+                   referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+           <div class="formulario-container">
+               <div class="formulario">
+                   <h2>Formulario</h2>
+                   <label for="nombre">Nombre:</label>
+                   <input type="text" id="nombre" name="nombre" required>
+          
+                   <label for="email">Correo electrónico:</label>
+                   <input type="email" id="email" name="email" required>
+          
+                   <label for="sugerencia">Sugerencia:</label>
+                   <textarea id="sugerencia" name="sugerencia" rows="4" required></textarea>
+          
+                   <div class="checkbox">
+                       <input type="checkbox" id="suscripcion" name="suscripcion">
+                       <label for="suscripcion">TERMINOS Y CONDICIONES</label>
+                   </div>
+                   <button type="submit">Enviar Mensaje</button>
                 </div>
-                <div class="red">
-                    <a href="https://twitter.com/?lang=ca"><img src="fotostrabajo/logo-black.png.twimg.1920.png"
-                            alt="Twitter"></a>
-                </div>
-                <div class="red">
-                    <a href="https://www.instagram.com/"><img src="fotostrabajo/instagramLogo.png" alt="Instagram"></a>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="contenidoContacto">
-            <div class="mapa">
-                <h2>Ubicación</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.731756988709!2d2.5006220767169913!3d39.49797127160213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129788fef0948d5b%3A0xc10accc3ef41ff66!2sIES%20Son%20Ferrer!5e0!3m2!1ses!2ses!4v1708346099237!5m2!1ses!2ses"
-                    width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="formulario-container">
-                <div class="formulario">
-                    <h2>Formulario</h2>
-                    <label for="comentarios">Comentarios:</label>
-                    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="suscripcion" name="suscripcion">
-                    <label for="suscripcion">TERMINOS Y CONDICIONES</label>
-                </div>
-                <button type="submit">Enviar Mensaje</button>
-            </div>
-        </div>
-    </section>
+           </div>
+   </section>
 
-    <footer>
-        <a href="#inicio"><img src="fotostrabajo/logopagina.png" alt="Logo"></a>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos"> Nuestros Coches</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2024 Segundo Kilometraje</p>
-    </footer>
+
+   <footer>
+       <a href="#inicio"><img src="fotostrabajo/logopagina.png" alt="Logo"></a>
+       <nav>
+           <ul>
+               <li><a href="#inicio">Inicio</a></li>
+               <li><a href="#productos"> Nuestros Coches</a></li>
+               <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+               <li><a href="#contacto">Contacto</a></li>
+           </ul>
+       </nav>
+       <p>&copy; 2024 Segundo Kilometraje</p>
+   </footer>
 </body>
+
+
 </html>
